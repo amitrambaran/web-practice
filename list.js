@@ -3,7 +3,19 @@ var todos = ["yeet"];
 window.setTimeout(function () {
     var input = prompt("Enter a command");
 
-    if (input === list) {
-        console.log(todos);
+
+    while (input !== "quit") {
+        if (input === "list") {
+            console.log(todos);
+        }
+        else if (input === "new") {
+            var newTodo = prompt("Enter new item");
+            todos.push(newTodo);
+        }
+        input = prompt("Enter a command");
     }
-}, 500);
+    console.log("App terminated.")
+
+}
+
+    , 500);
