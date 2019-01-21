@@ -1,0 +1,45 @@
+html{
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Sarabun', sans-serif;
+    
+}
+
+header{
+    text-align: center;
+    background: #191919;
+    padding: 20px 0;
+    color: #D6D6D6;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #191919;
+    color: #D6D6D6;
+    padding: 10px 0;
+
+}
