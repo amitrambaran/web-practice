@@ -10,7 +10,7 @@ html{
 
 body{
     font-family: 'Sarabun', sans-serif;
-    
+    transition: 0.3s;
 }
 
 header{
@@ -22,12 +22,21 @@ header{
 
 nav{
     padding: 10px;  
+    margin: 10px;
+}
+
+li{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
 }
 
 .container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none;
+    padding-left: 0;
 }
 
 .card{
@@ -67,6 +76,7 @@ footer{
     background: #191919;
     color: #D6D6D6;
     padding: 5px 0;
+    margin-top: 10px;
 }
 
 #footer-site{
@@ -98,3 +108,55 @@ figcaption{
     width: 60%;
     height: auto;
 }
+
+#description{
+    text-align: center;
+    margin: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        flex-direction: column;
+    }
+    .pics{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .responsive{
+        background-color: #FFCEFF;
+    }
+} 
+
+@media only screen and (min-width: 600px) {
+    .container{
+        flex-direction: column;
+    }
+    .pics{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .responsive{
+        background-color: #CACAFF;
+    }
+} 
+
+@media only screen and (min-width: 768px) {
+    .container{
+        flex-direction: row;
+        align-items: center;
+    }
+    .pics{
+        flex-wrap: wrap;
+    }
+    .responsive{
+        background-color: #D6F8DE;
+    }
+} 
+
+@media only screen and (min-width: 992px) {
+    .responsive{
+        background-color: #F7F7CE;
+    }
+} 
