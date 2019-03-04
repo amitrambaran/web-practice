@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="reverseApp">
+
+<head></head>
+
+<body ng-controller="myController">
+    <div>
+        <p>{{greeting}}</p>
+        <p>{{greeting|reverse}}</p>
+        <p>{{greeting|reverse:true}}</p>
+    </div>
+
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+    <script>
+        var myApp = angular.module('reverseApp', []);
+        myApp.controller('myController', ['$scope', function ($scope) {
+            $scope.greeting = "Hello world!";
+        }]);
+
+        myApp.filter('reverse', function () {
+            return function (input, uppercaseBoolean) {
+                input = input || '';
+                var out = "";
+                for (var i = 0; i < input.length; i++) {
+                    out = input.charAt(i) + out;
+                }
+
+                if (uppercaseBoolean) {
+                    out = out.toUpperCase();
+                }
+                return out;
+            };
+        });
+    </script>
+</body>
+
+</html>
